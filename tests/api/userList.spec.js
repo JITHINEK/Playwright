@@ -15,7 +15,7 @@ test.describe.parallel("REQRES puplic api testing ", () => {
         expect(body.data.length).toBe(6)
     })
 
-    test("Reqres api test: User List: page exceeds", async ({ request }) => {
+    test("Reqres api test: User List: page exceeds", { tag: '@negative' }, async ({ request }) => {
         const response = await request.get(`${baseurl}/users?page=3`)
         expect(response.status()).toBe(200);
 

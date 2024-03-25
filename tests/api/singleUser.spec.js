@@ -21,7 +21,7 @@ test.describe.parallel("Reqres api: Single user request:", () => {
 
     })
 
-    test("Single user api reqeust with in-valid user id", async ({ request }) => {
+    test("Single user api reqeust with in-valid user id", { tag: '@negative' }, async ({ request }) => {
 
         const response = await request.get(`${baseurl}/users/200`);
         expect(response.status()).toBe(404)

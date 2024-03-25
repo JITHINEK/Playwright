@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:api": "playwright test --config=api.config.js --project=chromium"
+    "test:api": "playwright test --config=api.config.js --project=chromium",
+    "test:api-negative": "playwright test --config=api.config.js --project=chromium --grep @negative"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +13,8 @@
   "devDependencies": {
     "@playwright/test": "^1.42.1",
     "@types/node": "^20.11.30"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1"
   }
 }
